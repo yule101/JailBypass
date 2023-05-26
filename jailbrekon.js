@@ -1,9 +1,9 @@
-var target_Module = "com.xxx.xxx"; //更改需要附加的包名
+var target_Module = "com.xxx.xxx"; //包名
 
 	if (ObjC.available){
 	    console.log("===hooking!======")
 	    var class_name = "xxx_ProAppDelegate"; //类名
-	    var method_name = "- iphoneIsJailbroken"; //方法名
+	    var method_name = "- xxxxIsJailbroken"; //方法名
 	    var hook = eval('ObjC.classes.' + class_name + '["' + method_name + '"]');
 	    Interceptor.attach(hook.implementation, {
 	        onEnter:function(args){
